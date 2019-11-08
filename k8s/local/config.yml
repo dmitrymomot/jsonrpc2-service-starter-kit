@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+  labels:
+    name: api
+data:
+  APP_NAME: MyApp
+  APP_HOST: localhost:8080
+  APP_PORT: '8080'
+  APP_URL: http://localhost:8081
+  APP_CONFIRMATION_URL: 'http://localhost:8081/confirm?token=%s'
+  APP_RESET_PASSWORD_URL: 'http://localhost:8081/reset-password?token=%s'
+  HEALTHCHECK_URL: localhost:8080/health
+  JWT_SIGNING_KEY: 6by7DSFVSD5ybrFF5hjluk45tV
+  JWT_TTL: '86400'
+  JWT_REFRESH_TTL: '3600'
+  SIGNING_KEY: b0eAjMig6N7l9Fzf
+  PG_HOST: postgres
+  PG_PORT: '5432'
+  PG_DB: pgdb
+  PG_USER: pguser
+  PG_PASSWORD: pgpass
+  LOG_LEVEL: '1' # 1 - debug, 2 - info, 3 - warning, 4 - error, 5 - off, 6 - panic, 7 - fatal
+  REDIS_HOST: 'redis://redis:6379'
+  MAIL_DRIVER: smtp
+  MAIL_HOST: smtp.yandex.ru
+  MAIL_PORT: '465'
+  MAIL_USERNAME: notifications@shkola.app
+  MAIL_PASSWORD: 5ybrFF5hjluk45
+  MAIL_ENCRYPTION: ssl
+  MAIL_SENDER_EMAIL: notifications@shkola.app
+  MAIL_SENDER_IDENTITY: Shkola.app

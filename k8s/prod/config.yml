@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+  labels:
+    name: api
+data:
+  APP_NAME: shkola.app
+  APP_HOST: api.shkola.app
+  APP_PORT: '8080'
+  HEALTHCHECK_URL: shkola.app/health
+  JWT_SIGNING_KEY: 6by7DSFVSD5ybrFF5hjluk45tV
+  JWT_TTL: '86400'
+  JWT_REFRESH_TTL: '3600'
+  SIGNING_KEY: b0eAjMig6N7l9Fzf
+  PG_HOST: private-db-postgresql-fra1-97117-do-user-1602725-0.db.ondigitalocean.com
+  PG_PORT: '25060'
+  PG_DB: defaultdb
+  PG_USER: doadmin
+  PG_PASSWORD: ai0j84wwy2uuw0as
+  PG_SSL_MODE: require
+  DO_CERT_PATH: /ca-certificate.crt
+  LOG_LEVEL: '3' # 1 - debug, 2 - info, 3 - warning, 4 - error, 5 - off, 6 - panic, 7 - fatal
+  REDIS_HOST: rediss://default:dct43v0xfeug3vyy@private-db-redis-fra1-83639-do-user-1602725-0.db.ondigitalocean.com:25061
